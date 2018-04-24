@@ -1,0 +1,116 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>  jquery  </title>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <link rel="stylesheet" type="text/css" href="jQuery.css">
+            <style>
+                .selected {
+                color: red;
+                }
+                .highlight {
+                background: yellow;
+                }
+            </style>          
+            <script>
+                $(document).ready(function(){
+                    $("#hide1").click(function(){
+                        $(".shhi").hide()
+                    })
+                    $("#show1").click(function(){
+                        $(".shhi").show()
+                    })
+                    $("#toggle1").click(function(){
+                        $("#toggle2").toggle()
+                    })
+                    $("#slideup").click(function(){
+                        $(".slideup1").slideUp();
+                    })
+                    $("#slidedown").click(function(){
+                        $(".slideup1").slideDown()
+                    })
+                    $("#slidetoggle").click(function(){
+                        $("#slidetoggle1").slideToggle()
+                    })
+                    $("#fadein").click(function(){
+                        $("#fadeshow1").fadeIn()
+                    })
+                    $("#fadeout").click(function(){
+                        $("#fadeshow1").fadeOut()
+                    })
+                    $("#addclass1").click(function(){
+                        $("#addhl").addClass("selected highlight")
+                    })
+                    $("#removeclass").click(function(){
+                        $("#addhl").removeClass("selected highlight")
+                    })
+                    $("#buttonafter").click(function(){
+                        $("#befor1").before($("#after1"))
+                    })
+                    $("#buttonbefore").click(function(){
+                        $("#befor1").after( $("#after1"))
+                    })
+                    $("#appendbutton").click(function(){
+                        $("#info").append($("#inputinfo").val())
+                    })
+                    $("#clear").click(function(){
+                        $("#info").html("")
+                    })
+                })
+            </script>
+    </head>
+    <body>
+            <div class="wrapper">
+               
+                <div class="hs">
+                    <button id="show1">show</button>
+                    <button id="hide1">hide</button>
+                    <p class="shhi"> this button will hide with the hide with the hide button, and show with the show button. </p>
+                    <hr>
+                </div>
+
+                <div id="toggle">
+                    <button id="toggle1">toggle</button>
+                    <p id="toggle2">  clicking this button will toggle, to hide and show.</p>
+                    <hr>
+                </div>
+                <div id="slideshow">
+                    <button id="slideup">slide up</button>
+                    <button id="slidedown">slide down</button>
+                    <p class="slideup1">the slide up button will slide up, and the slide down button will slide down.</p>
+                    <hr>
+                </div>
+                <div id="slideshow1">
+                    <button id="slidetoggle">slide toggle</button>
+                    <p id="slidetoggle1">this button will toggle slide up and slide down.</p>
+                    <hr>
+                </div>
+                <div id="fadeshow">
+                    <button id="fadein">fade in</button>
+                    <button id="fadeout">fade out</button>
+                    <p id="fadeshow1">clicking this button tell fade the text in and out</p>
+                    <hr>
+                </div>
+                <div id="addclass">
+                    <button id="addclass1">Add class</button>
+                    <button id="removeclass">remove class</button>
+                    <p id="addhl">Clicking this button tell add a class that is highlight to the text</p>
+                    <hr>
+                </div>
+                <div id="beforafter">
+                    <button id="buttonbefore">Before</button>
+                    <button id="buttonafter">After</button>
+                    <h1 id="befor1"> this is header 1</h1>
+                    <h2 id="after1"> this is header 2</h2>
+                    <hr>
+                </div>
+                <div id="app">
+                    <button id="appendbutton">append</button>
+                    <button id="clear">clear text</button>
+                    <input id="inputinfo" type="text">
+                    <p id="info"></p>
+                    <p> click append to add val from input bax, html to clear the text,</p>
+                </div>
+            </div>
+    </body>
+</html>
